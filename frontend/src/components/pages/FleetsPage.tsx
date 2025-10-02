@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import {
   PageSection,
-  PageSectionVariants,
   Title,
   Card,
   CardBody,
@@ -40,14 +39,14 @@ const FleetsPage: React.FC = () => {
   return (
     <>
       {/* Header */}
-      <PageSection variant={PageSectionVariants.light}>
+      <PageSection >
         <Title headingLevel="h1" size="2xl">
           Fleets
         </Title>
       </PageSection>
 
       {/* Suspended Devices Alert */}
-      <PageSection variant={PageSectionVariants.light}>
+      <PageSection >
         <Alert
           variant="danger"
           title="Suspended devices detected"
@@ -80,7 +79,7 @@ const FleetsPage: React.FC = () => {
                     />
                   </ToolbarItem>
                 </ToolbarGroup>
-                <ToolbarGroup align={{ default: 'alignRight' }}>
+                <ToolbarGroup align={{ default: 'alignEnd' }}>
                   <ToolbarItem>
                     <Button variant="primary">Create fleet</Button>
                   </ToolbarItem>

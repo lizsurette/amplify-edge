@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import {
   PageSection,
-  PageSectionVariants,
   Title,
   Card,
   CardBody,
@@ -80,7 +79,7 @@ const DevicesPage: React.FC<DevicesPageProps> = ({ onAddDeviceClick, onDeviceSel
   return (
     <>
       {/* Header */}
-      <PageSection variant={PageSectionVariants.light}>
+      <PageSection>
         <Title headingLevel="h1" size="2xl">
           Devices
         </Title>
@@ -88,7 +87,7 @@ const DevicesPage: React.FC<DevicesPageProps> = ({ onAddDeviceClick, onDeviceSel
       </PageSection>
 
       {/* System Recovery Alert */}
-      <PageSection variant={PageSectionVariants.light}>
+      <PageSection>
         <Alert
           variant="warning"
           title="System recovery complete."
@@ -143,7 +142,7 @@ const DevicesPage: React.FC<DevicesPageProps> = ({ onAddDeviceClick, onDeviceSel
                     />
                   </ToolbarItem>
                 </ToolbarGroup>
-                <ToolbarGroup align={{ default: 'alignRight' }}>
+                <ToolbarGroup align={{ default: 'alignEnd' }}>
                   <ToolbarItem>
                     <Button variant="primary" onClick={onAddDeviceClick}>Add devices</Button>
                   </ToolbarItem>

@@ -1,13 +1,12 @@
 import React from 'react';
 import {
   PageSection,
-  PageSectionVariants,
   Title,
 } from '@patternfly/react-core';
 
 const SettingsPage: React.FC = () => {
   return (
-    <PageSection variant={PageSectionVariants.light}>
+    <PageSection >
       <Title headingLevel="h1" size="2xl">
         Settings
       </Title>

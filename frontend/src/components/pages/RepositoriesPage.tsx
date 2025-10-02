@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import {
   PageSection,
-  PageSectionVariants,
   Title,
   Card,
   CardBody,
@@ -37,7 +36,7 @@ const RepositoriesPage: React.FC = () => {
   return (
     <>
       {/* Header */}
-      <PageSection variant={PageSectionVariants.light}>
+      <PageSection >
         <Title headingLevel="h1" size="2xl">
           Repositories
         </Title>
@@ -61,7 +60,7 @@ const RepositoriesPage: React.FC = () => {
                     />
                   </ToolbarItem>
                 </ToolbarGroup>
-                <ToolbarGroup align={{ default: 'alignRight' }}>
+                <ToolbarGroup align={{ default: 'alignEnd' }}>
                   <ToolbarItem>
                     <Button variant="primary">Create a repository</Button>
                   </ToolbarItem>

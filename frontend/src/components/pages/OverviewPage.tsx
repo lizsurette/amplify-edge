@@ -1,7 +1,6 @@
 import React from 'react';
 import {
   PageSection,
-  PageSectionVariants,
   Title,
   Card,
   CardBody,
@@ -20,7 +19,7 @@ const OverviewPage: React.FC = () => {
   return (
     <>
       {/* Header */}
-      <PageSection variant={PageSectionVariants.light}>
+      <PageSection>
         <Title headingLevel="h1" size="2xl">
           Overview
         </Title>

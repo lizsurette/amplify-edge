@@ -54,7 +54,10 @@ const AppMasthead: React.FC<AppMastheadProps> = ({
               onError={(e) => {
                 // Fallback to simple icon if image doesn't load
                 e.currentTarget.style.display = 'none';
-                e.currentTarget.nextElementSibling.style.display = 'block';
+                const nextSibling = e.currentTarget.nextElementSibling as HTMLElement;
+                if (nextSibling) {
+                  nextSibling.style.display = 'block';
+                }
               }}
             />
             <div style={{
@@ -103,7 +106,7 @@ const AppMasthead: React.FC<AppMastheadProps> = ({
               </MenuToggle>
             )}
             shouldFocusToggleOnSelect
-            popperProps={{ placement: 'bottom-end' }}
+            popperProps={{}}
           >
             <DropdownList>
               <DropdownItem value="profile" key="profile">Profile</DropdownItem>
