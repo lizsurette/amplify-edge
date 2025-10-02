@@ -48,7 +48,7 @@ const AppMasthead: React.FC<AppMastheadProps> = ({
           <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
             <span style={{ fontWeight: 'bold', fontSize: '18px', color: 'white' }}>Flight Control</span>
             <img
-              src={`${import.meta.env.BASE_URL}logo.png`}
+              src={`${(import.meta as any).env?.BASE_URL || '/'}logo.png`}
               alt="Flight Control Logo"
               style={{ width: '32px', height: '24px', flexShrink: 0 }}
               onError={(e) => {
@@ -90,7 +90,7 @@ const AppMasthead: React.FC<AppMastheadProps> = ({
                   }
                 }
               ]
-            }}
+            } as any}
             toggle={(toggleRef) => (
               <MenuToggle
                 ref={toggleRef}
