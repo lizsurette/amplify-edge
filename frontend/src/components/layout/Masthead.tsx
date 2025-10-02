@@ -48,7 +48,7 @@ const AppMasthead: React.FC<AppMastheadProps> = ({
           <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
             <span style={{ fontWeight: 'bold', fontSize: '18px', color: 'white' }}>Flight Control</span>
             <img
-              src="/logo.png"
+              src={`${import.meta.env.BASE_URL}logo.png`}
               alt="Flight Control Logo"
               style={{ width: '32px', height: '24px', flexShrink: 0 }}
               onError={(e) => {
@@ -79,8 +79,18 @@ const AppMasthead: React.FC<AppMastheadProps> = ({
           <span style={{ fontSize: '14px', color: 'white' }}>Demo User</span>
           <Dropdown
             isOpen={isUserDropdownOpen}
-            onSelect={() => setIsUserDropdownOpen(false)}
             onOpenChange={(isOpen: boolean) => setIsUserDropdownOpen(isOpen)}
+            popperProps={{
+              placement: 'bottom-end',
+              modifiers: [
+                {
+                  name: 'offset',
+                  options: {
+                    offset: [-8, 8]
+                  }
+                }
+              ]
+            }}
             toggle={(toggleRef) => (
               <MenuToggle
                 ref={toggleRef}
@@ -105,8 +115,6 @@ const AppMasthead: React.FC<AppMastheadProps> = ({
                 </div>
               </MenuToggle>
             )}
-            shouldFocusToggleOnSelect
-            popperProps={{}}
           >
             <DropdownList>
               <DropdownItem value="profile" key="profile">Profile</DropdownItem>

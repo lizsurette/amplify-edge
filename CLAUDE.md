@@ -149,6 +149,12 @@ interface Repository {
 - **Type safety**: All components use TypeScript interfaces
 - **Mock data**: Embedded sample data for demonstration reliability
 
+### **PatternFly Component Development**
+- **ALWAYS USE PatternFly MCP FIRST**: Before implementing any PatternFly component, use the `mcp__patternfly__usePatternFlyDocs` and `mcp__patternfly__fetchDocs` tools to get official documentation and code examples
+- **Check component documentation**: Use MCP to find proper component usage patterns, props, and positioning
+- **Follow official examples**: Use the exact patterns shown in PatternFly documentation rather than guessing
+- **Common issues to check**: Dropdown positioning, form validation, table functionality, modal behavior
+
 ### **Styling & UI**
 - **PatternFly consistency**: Use PatternFly components throughout
 - **Custom styling**: Minimal inline styles for specific layout needs
@@ -178,6 +184,13 @@ interface Repository {
 - **Follow naming conventions**: Clear, descriptive component names
 
 ## Recent Changes
+
+### 2025-10-02 (GitHub Pages Deployment & Component Fixes)
+- **GitHub Pages Deployment**: Successfully deployed Flight Control to https://lizsurette.github.io/amplify-edge/
+- **Fixed TypeScript Issues**: Resolved PatternFly v6 compatibility issues (PageSectionVariants, alignment props)
+- **Updated GitHub Actions**: Configured proper Node.js 20, permissions, and deployment workflow
+- **Fixed Dropdown Positioning**: Resolved user avatar dropdown positioning using PatternFly MCP guidance
+- **Added MCP Development Guidelines**: Added prominent guidance to always use PatternFly MCP for component implementation
 
 ### 2025-10-01 (Evening): Documentation Updates
 - **Updated README.md**: Comprehensive user-facing documentation with proper branding
