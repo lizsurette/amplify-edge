@@ -1,0 +1,9 @@
+{
+  "servers": {
+    "patternfly-docs": {
+      "type": "stdio",
+      "command": "npx",
+      "args": ["@jephilli-patternfly-docs/mcp"]
+    }
+  }
+}
